@@ -101,6 +101,49 @@
           <button onclick="addNewAttention()">Agregar atención</button>
         </div>
       </div>
+
+      <script>
+        function search() {
+    var input = document.getElementById('searchInput').value;
+    // Aquí puedes implementar la lógica de búsqueda
+    console.log('Búsqueda:', input);
+  }
+
+  // Función para iniciar sesión
+  function login() {
+    var email = prompt('Ingrese su correo electrónico:');
+    var password = prompt('Ingrese su contraseña:');
+    // Aquí puedes implementar la lógica de inicio de sesión
+    console.log('Email:', email);
+    console.log('Contraseña:', password);
+  }
+
+  // Función para registrarse
+  function register() {
+    var email = prompt('Ingrese su correo electrónico:');
+    var name = prompt('Ingrese su nombre:');
+    var password = prompt('Ingrese su contraseña:');
+    // Aquí puedes implementar la lógica de registro
+    console.log('Email:', email);
+    console.log('Nombre:', name);
+    console.log('Contraseña:', password);
+  }
+
+  // Función para agregar nueva atención
+  function addNewAttention() {
+    var mechanic = prompt('Ingrese el nombre del mecánico:');
+    var diagnosis = prompt('Ingrese el diagnóstico:');
+    var date = prompt('Ingrese la fecha:');
+    var materials = prompt('Ingrese el listado de materiales:');
+    var images = prompt('Ingrese las imágenes:');
+    // Aquí puedes implementar la lógica para agregar una nueva atención
+    console.log('Mecánico:', mechanic);
+    console.log('Diagnóstico:', diagnosis);
+    console.log('Fecha:', date);
+    console.log('Materiales:', materials);
+    console.log('Imágenes:', images);
+  }
+      </script>
 </body>
 </html>
 
