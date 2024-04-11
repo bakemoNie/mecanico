@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeonic</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Taller Mecánico</a>
+      </nav>
+      
+      <!-- Contenido principal -->
+      <div class="container mt-4">
+        <!-- Carrusel de imágenes de los últimos trabajos -->
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="IMG/trabajo1.jpg" class="d-block w-100" alt="Trabajo 1">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Trabajo 1</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="IMG/char_auto.png" class="d-block w-100" alt="Trabajo 2">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Trabajo 2</h5>
+              </div>
+            </div>
+            <!-- Agrega más trabajos aquí -->
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+          </a>
+        </div>
+      
+        <!-- Detalle del trabajo -->
+        <div id="detalleTrabajo" class="mt-4">
+          <!-- Aquí se mostrará el detalle del trabajo seleccionado -->
+        </div>
+      
+        <!-- Búsqueda y filtro -->
+        <div class="mt-4">
+          <input type="text" id="searchInput" placeholder="Buscar por nombre del mecánico o palabra clave">
+          <button onclick="search()">Buscar</button>
+        </div>
+      
+        <!-- Cantidad de mantenimientos -->
+        <div class="mt-4">
+          <p>Cantidad de mantenimientos ingresados: <span id="cantidadMantenimientos">0</span></p>
+        </div>
+      
+        <!-- Formulario de contacto -->
+        <div class="mt-4">
+          <h3>Formulario de Contacto</h3>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Correo electrónico</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Contraseña</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      
+        <!-- Atenciones por categoría o mecánico -->
+        <div class="mt-4">
+          <h3>Atenciones por categoría o mecánico</h3>
+          <!-- Aquí se mostrarán las atenciones por categoría o mecánico -->
+        </div>
+      
+        <!-- Autenticación y registro -->
+        <div class="mt-4">
+          <h3>Autenticación y registro</h3>
+          <button onclick="login()">Iniciar sesión</button>
+          <button onclick="register()">Registrarse</button>
+        </div>
+      
+        <!-- Agregar nueva atención -->
+        <div class="mt-4">
+          <h3>Agregar nueva atención</h3>
+          <button onclick="addNewAttention()">Agregar atención</button>
+        </div>
+      </div>
+
+      <script>
+        function search() {
+    var input = document.getElementById('searchInput').value;
+    // Aquí puedes implementar la lógica de búsqueda
+    console.log('Búsqueda:', input);
+  }
+
+  // Función para iniciar sesión
+  function login() {
+    var email = prompt('Ingrese su correo electrónico:');
+    var password = prompt('Ingrese su contraseña:');
+    // Aquí puedes implementar la lógica de inicio de sesión
+    console.log('Email:', email);
+    console.log('Contraseña:', password);
+  }
+
+  // Función para registrarse
+  function register() {
+    var email = prompt('Ingrese su correo electrónico:');
+    var name = prompt('Ingrese su nombre:');
+    var password = prompt('Ingrese su contraseña:');
+    // Aquí puedes implementar la lógica de registro
+    console.log('Email:', email);
+    console.log('Nombre:', name);
+    console.log('Contraseña:', password);
+  }
+
+  // Función para agregar nueva atención
+  function addNewAttention() {
+    var mechanic = prompt('Ingrese el nombre del mecánico:');
+    var diagnosis = prompt('Ingrese el diagnóstico:');
+    var date = prompt('Ingrese la fecha:');
+    var materials = prompt('Ingrese el listado de materiales:');
+    var images = prompt('Ingrese las imágenes:');
+    // Aquí puedes implementar la lógica para agregar una nueva atención
+    console.log('Mecánico:', mechanic);
+    console.log('Diagnóstico:', diagnosis);
+    console.log('Fecha:', date);
+    console.log('Materiales:', materials);
+    console.log('Imágenes:', images);
+  }
+      </script>
+</body>
+</html>
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeonic</title>
+  <link href="style.css" rel="stylesheet">
+  <!-- Asegúrate de que la ruta a jQuery sea correcta -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar-placeholder">
+    <script>
+      $(function () {
+        // Carga la navbar de navbar.html en el div #navbar-placeholder
+        $("#navbar-placeholder").load("navbar.html", function () {
+          // Llama a checkLoginStatus después de cargar la navbar para asegurar
+          // que los elementos reflejen el estado de inicio de sesión actual.
+          checkLoginStatus();
+        });
+      });
+    </script>
+
+  </div>
+
+
+  <!--cards gatos owo forma 1-->
+  <div class="container fluid">
+    <br>
+    <h1>Nuestros Modelos: </h1>
+    <br>
+    <br>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="IMG/trabajo1.jpg" alt="trabajos" style="width: 300spx;" />
+          <div class="card-body">
+            <p class="card-text"> <a href="trabajo1.html" target="_blank">trabajo1</a> </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="IMG/char_auto.png" alt="trabajos" style="width: 300spx;" />
+          <div class="card-body">
+            <p class="card-text"><a href="trabajo2.html" target="_blank">trabajo2</a> </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="IMG/zaku2_car.png" alt="trabajos" style="width: 300spx;" />
+          <div class="card-body">
+            <p class="card-text"><a href="trabajo3.html" target="_blank">trabajo3</a> </p>
+          </div>
+        </div>
+      </div>
+
+    </div> <!--fin row-->
+
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
+</body>
+<footer class="bg-dark text-white mt-5 py-4 text-center">
+  Taller Mecánico © 2024. Todos los derechos reservados.
+</footer>
+
+</html>
